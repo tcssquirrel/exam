@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>轻松记-主页</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#header{
+				height: 60px;
+				background: radial-gradient(#008001,#57C309);
+				position: relative;
+				position: -webkit-sticky;
+ 				position: sticky;
+ 				top :0;
+ 				z-index: 10;
+			}
+			#header a{
+				float: left;
+				text-align: center;
+				display: inline-block;
+				height: 60px;
+				width: 80px;
+				line-height: 60px;
+				border-radius: 20px;
+				margin-left: 5px;
+				margin-right: 5px;
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+			#header a:hover{
+				color:#51F687;
+				line-height: 60px;
+				background: radial-gradient(#6FCD21,#AAE222);
+			}
+			
+			
+			#header span{
+				position: absolute;
+				left: 600px;
+				display: inline-block;
+				line-height: 60px;
+				height: 60px;
+				text-decoration: none;
+				color: #FFFFFF;
+				font-size: 30px;
+			}
+			#header span a{
+				display: inline-block;
+				width: 120px;
+				height: 59px;
+				background-color: #FFFFFF;
+				color: #51F687;
+				border-radius: 40%;
+				box-shadow: 3px 2px 3px #ED9704;
+			}
+/*$$$$$$%%%*…………………………………………………分隔css样式…………………………………………………*%%%$$$$$$*/
+			#globe{
+				position: relative;
+				height: 600px;
+				background: radial-gradient(#69B00C,#40B0F8);
+			}
+			.top-button{
+				position: relative;
+				text-align: center;
+				height: 80px;
+				overflow: hidden;
+			}
+			.top-button a{
+				position: absolute;
+				top: -62px;
+				left: 45.4%;
+				display: inline-block;
+				font-size: 90px;
+				height: 140px;
+				width: 180px;
+				line-height: 170px;
+				color: #D84C29;
+				background: radial-gradient(#FED200,#42B203);
+				border-radius:50% ;
+				box-shadow: 3px 2px 3px #108C03;
+			}
+/*$$$$$$%%%*…………………………………………………分隔css样式…………………………………………………*%%%$$$$$$*/
+								/*书签*/
+			#content-left-text{
+				position: absolute;
+				top: 130px;
+				background-image: url(img/棕色背景1.png);
+				display: inline-block;
+				height: 400px;
+				width: 400px;
+				margin-left: 30px;
+				box-shadow: 5px 3px #7D5C48;
+				}
+			#content-left-text div p{
+				background-color: #FFFFFF;
+				border-bottom: 1px solid #000000;
+				text-align: center;
+			}
+/*$$$$$$%%%*…………………………………………………分隔css样式…………………………………………………*%%%$$$$$$*/
+						/*手里剑，代码来自jquery*/
+			.box {
+				position: absolute;
+				top: 70px;
+				left: 470px;
+				position:relative;
+				display: inline-block;
+				height: 400px;
+				width:400px;
+				transition:all .6s;
+			}
+			.box:hover {
+				transform:rotate(270deg);
+			}
+			.top {
+				width:0;
+				margin:0 auto;
+				border-top:0px solid transparent;
+				border-left:50px solid transparent;
+				border-right:50px solid transparent;
+				border-bottom:200px solid #6b6b6b;
+			}
+			.top_shadow {
+				position:absolute;
+				left:50%;
+				margin-left:-1px;
+				top:15px;
+				width:2px;
+				height:150px;
+				background:#fff;
+				border-radius:50%;
+				box-shadow:0 0 10px #fff;
+			}
+			.center {
+				position:relative;
+				width:0px;
+				margin:0 auto;
+				border-top:60px solid #6b6b6b;
+				border-left:50px solid transparent;
+				border-right:50px solid transparent;
+				border-bottom:0px solid transparent;
+			}
+			.center1 {
+				position:absolute;
+				top:-80px;
+				left:0px;
+				width:50px;
+				height:2px;
+				background:#fff;
+				border-radius:50%;
+				box-shadow:0 0 10px #fff;
+				transform:rotate(35deg);
+			}
+			.center2 {
+				position:absolute;
+				top:-80px;
+				right:0px;
+				width:50px;
+				height:2px;
+				background:#fff;
+				border-radius:50%;
+				box-shadow:0 0 10px #fff;
+				transform:rotate(-35deg);
+			}
+			.bottom {
+				z-index:2;
+				top:-15px;
+				position:relative;
+				width:50px;
+				margin:0 auto;
+			}
+			.bottom div {
+				width:30px;
+				height:8px;
+				margin:0 auto;
+				border-radius:5px;
+				background:#14E395;
+				border-bottom:0.5px solid #fff;
+			}
+			.round {
+				position:relative;
+				margin:0 auto;
+				top:-20px;
+				width:50px;
+				height:50px;
+				border-radius:50%;
+			}
+			.centerRound {
+				position:absolute;
+				width:30px;
+				height:30px;
+				top:50%;
+				left:50%;
+				margin-top:-15px;
+				margin-left:-15px;
+				background:#fff;
+				border-radius:50%;
+				z-index:1;
+			}
+			.round:after {
+				position:absolute;
+				width:50px;
+				height:50px;
+				background:linear-gradient(to right,red,blue);
+				content:'';
+				border-radius:50%;
+				background:linear-gradient(to bottom right,#000,#eee);
+			}
+/*$$$$$$%%%*…………………………………………………分隔css样式…………………………………………………*%%%$$$$$$*/
+			.img-right-1{
+				position: absolute;
+				right: 10px;
+				top: 0px;
+			}
+			.img-right-2{
+				position: absolute;
+				right: 55px;
+				top: 0px;
+			}
+			.img-right-3{
+				position: absolute;
+				right: 100px;
+				top: 0px;
+			}
+/*$$$$$$%%%*…………………………………………………分隔css样式…………………………………………………*%%%$$$$$$*/
+				/*页脚css*/
+				#footer{
+					background:radial-gradient(#F0F0F0,#636363);
+					height: 100px;
+					width: 100%;
+					text-align: center;
+				}
+				#footer p{
+					line-height: 100px;
+				}
+				#footer p a{
+					text-decoration: none;
+					color: #4F2100;
+					padding: 20px;
+				}
+				#footer p a:hover{
+					color: #FFFFFF;
+				}
+		</style>
+	</head>
+	<body>
+		<header id="header">
+			<a href="javascript:;">首页</a>
+			<a href="index-2.html">项目简介</a>
+			<a href="index-3.html">项目前景</a>
+			<a href="javascript:;">更多</a>
+			<span><a>轻松记</a></span>
+		</header>
+<!--*&&&&&………………………………………………………用于分隔……………………………………………………………&&&&&*-->
+		<div id="globe">
+			<div class="top-button">
+				<a>+</a>
+			</div>
+			
+					<!--书签html代码如下-->
+					<div id="content-left-text">
+						<div>
+							<p>轻松记，专为你留一份安静</p>
+							<p style="background-color: #D7B08C;text-align: left;border:0;line-height: 24px;">
+								<br>
+							&emsp;&emsp;请永远记住！当你感到累了，当你感觉这个世界再没有人为你担心，轻松记将是你最暖心的小港湾。
+							轻松记绝不是一款单纯的便签软件，我们的目标虽然也是为了赚点钱。“大家生活在同样的世界里，为生活奔波这种事还望理解”
+							但是我们承诺，一定保证用户使用的暖心。
+							</p>
+							<p style="text-align: center;background-color: #D7B08C;border:0;font-size: 20px;font-family: '楷体';">
+								<br>
+								<br>
+								为，正出们在外的你。<br><br>为，正在学习奋斗的你。<br><br>为，平凡但依旧可以活的伟大的你。
+							</p>
+						</div>
+					</div>
+<!--*&&&&&………………………………………………………用于分隔……………………………………………………………&&&&&*-->
+			            <!--手里剑HTML代码如下-->
+					<div class="box">
+					    <div class="top">
+					        <div class="top_shadow"></div>
+					    </div>
+					    <div class="center">
+					        <div class="center1"></div>
+					        <div class="center2"></div>
+					    </div>
+					    <div class="bottom">
+					        <div></div>
+					        <div></div>
+					        <div></div>
+					        <div></div>
+					        <div></div>
+					        <div></div>
+					        <div></div>
+					        <div></div>
+					    </div>
+					    <div class="round">
+					        <div class="centerRound"></div>
+					    </div>
+					</div>   <!--手里剑代码结束-->
+					<img class="img-right-1" src="img/树叶图 1.png"style="height: 380px;width: 35px;"/>
+					<img class="img-right-2" src="img/树叶图 1.png"style="height: 280px;width: 35px;"/>
+					<img class="img-right-3" src="img/树叶图 1.png"style="height: 180px;width: 30px;"/>
+		</div>
+		<div id="footer">
+			<p>
+				<a href="javascript:;">返回主页</a>
+				<a href="javascript:;">广告联系</a>
+				<a href="index-4.html">移动端</a>
+			</p>
+		</div>
+	</body>
+</html>

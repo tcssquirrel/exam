@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.div1{
+				height: 80px;
+				background-color: lightblue;
+				margin-bottom: 10px;
+			}
+			.search-left{
+				float: left;
+				margin-top: 4px;
+			}
+			.search{
+				float: left;
+				margin-left: 200px;
+				margin-top: 26px;
+				line-height: 26px;
+				width: 250px;
+				height: 30px;
+				border:2px solid #DFDFDF;
+				border-radius: 20px;
+				background-color: #F3F6F8;
+			}
+			.search1{
+				float: left;
+			}
+			#web{
+				padding: 0 15px;
+			}
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #949494;
+				min-width: 100%;
+			}
+			.dropdown:hover .dropdown-content {
+				display:block ;
+			}
+			.search2{
+				float: left;
+			}
+			.search2 input{
+				border: none;
+				background-color: #F3F6F8;
+			}
+			.search3{
+				float: left;
+			}
+			.sogou-search{
+				color: #fff;
+				background-color: #1479d7;
+				margin-top: 26px;
+				margin-left: -30px;
+				line-height: 30px;
+				height: 33px;
+				width: 100px;
+				border: 0;
+				border-radius: 20px;
+			}
+			.div2{
+				height: 45px;
+				background-color: #1479D7;
+				width: 100%;
+			}
+			li{				
+				float: left;
+				overflow: hidden;
+				height: 40px;
+				width: 71px;
+				list-style: none;
+				text-align: center;
+			}
+			a:link{
+				direction: none;
+			}
+			a:hover{
+				color: #EA2000;
+			}
+			a:visited{
+				color: #FFFFFF;
+			}
+			li a{
+				color: #FFFFFF;
+				line-height: 50px;
+				font-family: "黑体";
+				text-decoration: none;
+				font-size: 18px;
+			}
+			.img1{
+				float: left;
+				margin-top: 30px;
+				margin-left: -40px;
+			}
+			.blank{
+				float: left;
+				height:100px ;
+				width: 100px;
+			}
+			.img2{
+				float: left;
+				overflow: hidden;
+				height: 100px;
+				width: 350px;
+				margin-top: 30px;
+			}
+			.left{
+				float: left;
+				width: 66%;
+				margin-left: -1200px;
+				margin-top: 140px;
+				margin-bottom: -10px;
+			}
+			
+			.right{
+				float: left;
+				width: 33%;
+			}
+			.tr{
+				height: 40px;
+				font-family: ;
+			}
+			.td a{
+				text-decoration: none;
+			}
+			.td a:link{
+				direction: none;
+				color: #000000;
+			}
+			.td a:hover{
+				color: #0c82ff;
+			}
+			.td a:visited{
+				color: #FFFFFF;
+			}
+			/*右侧tablecss样式，来自于刘韬*/
+			.right{
+				float: right;
+				margin-top: -337px;
+			}
+			table a {
+				text-decoration: none;
+				color: #455569;
+				text-align: -webkit-match-parent;
+			}
+			.phone{
+			     background-image: url(img/icons.png);
+			     background-position: -15px -293px;
+			     background-repeat: no-repeat;
+			     width: 30px;
+				height: 34px;
+			}
+			.button{
+				border-radius: 20px;
+				background-color: #B5CCEC;
+			}
+			.more{
+				color: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="global">
+			
+			<!--第一排搜索-->
+			<div class="div1">
+				<!--logo-->
+			     <div class="search-left">
+			          <img src="img/XTU-logo.png" />
+			     </div>
+			     
+			     <!--搜索框-->
+			     <div class="search">
+			        <div class="search1">
+			        	<div class="dropdown">
+			        		<span id="web">网页</span>
+			        	    <div class="dropdown-content">
+			        			<li><a href="javascript:;">视频</a></li>
+						        <li><a href="javascript:;">图片</a></li>
+						        <li><a href="javascript:;">音乐</a></li>
+						        <li><a href="javascript:;">地图</a></li>
+						        <li><a href="javascript:;">问问</a></li>
+						        <li><a href="javascript:;">网页</a></li>
+						        <li><a href="javascript:;">百科</a></li>
+						        <li><a href="javascript:;">新闻</a></li>
+						        <li><a href="javascript:;">购物</a></li>
+			        	    </div>
+			        	</div>
+			        </div>
+			        <div class="search2">
+			     	    <input type="search" />
+			        </div>
+			     </div>
+			     
+			     <!--搜狗搜索-->
+			     <div class="search3">
+			     	    <button class="sogou-search">搜狗搜索</button>
+			        </div>
+			     <div class="search-right"></div>
+			</div>
+			<!--第二排导航栏-->
+			<div class="div2">
+				        <li ><a href="javascript:;">新闻</a></li>
+						<li><a href="javascript:;">新闻</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">图片</a></li>
+						<li><a href="javascript:;">军事</a></li>
+						<li><a href="javascript:;">体育</a></li>
+						<li><a href="javascript:;">NBA</a></li>
+						<li><a href="javascript:;">娱乐</a></li>
+						<li><a href="javascript:;">财经</a></li>
+						<li><a href="javascript:;">科技</a></li>
+						<li><a href="javascript:;">时尚</a></li>
+						<li><a href="javascript:;">汽车</a></li>
+						<li><a href="javascript:;">房产</a></li>
+						<li><a href="javascript:;">教育</a></li>
+						<li><a href="javascript:;">文化</a></li>
+						<li><a href="javascript:;">游戏</a></li>
+						<li><a href="javascript:;">星座</a></li>
+						<li><a href="javascript:;">更多</a></li>
+			</div>
+			<!--第三排图片-->
+			<div class="div3">
+				<div class="img1">
+					<img src="img/海贼王横图@2.jpg" style="height: 100px;width: 750px;"/>
+				</div>
+				<div class="blank">
+					
+				</div>
+				<div class="img2">
+					<img src="img/精灵旅社图.jpg" style="height: 100px;width: 350px;" />
+				</div>
+			</div>
+			<!--第四排新闻-->
+			<div class="div4">
+                	<!--第一行-->
+                	<div class="left">
+                		<div><p style="height: 40px;width: 100px;float:left;
+                			font-size: 19px; color: #4879D7;font-family: '黑体';"">
+                			要闻 |
+                		</p></div>
+                		<div><p style="height: 40px;width: 100px;float:left;
+                			font-size: 19px;font-family: '黑体';"">
+                			 湖南新闻
+                		</p></div>
+                		<div><p style="height: 40px;width: 100px;float:left;
+                			font-size: 19px;font-family: '黑体';"">
+                			<span></span>
+                		</p></div>
+                		<div><p style="height: 40px;width: 100px;float:left;
+                			font-size: 19px;font-family: '黑体';">
+                			湘潭   17C
+                		</p></div>
+                		<div><p style="height: 40px;width: 100px;float:left;
+                			font-size: 19px; color: #4879D7;font-family: '黑体';"">
+                			今日话题
+                		</p></div>
+                	</div>
+                	<!--第二行-->
+                	        <!--第二行左侧的table-->
+                     		<table border="0" cellspacing="0" width="64%" >
+                	<tr class="tr">
+                		<td class="td"><a href="javascript:;">
+                			校党委理论学习中心组织专题集中学习
+                		</a></td>
+                		<td class="td"><a href="javascript:;">
+                			【人民网】刘长青：从机构设置和学校制度两方面促进科技成果转化
+                		</a></td>
+                	</tr>
+                	<tr class="tr">
+                		<td class="td"><a href="javascript:;">
+                			我校获ACM国际大学生程序设计竞赛亚洲区域金奖
+                		</a></td>
+                		<td class="td"><a href="javascript:;">
+                			【人民网】图解：如何培养时代新人，26位高校书记校长这样说
+                		</a></td>
+                	</tr>
+                	<tr class="tr">
+                		<td class="td"><a href="javascript:;">
+                			王继平教授论文《民国湘中地区乡村经济》被《新华摘文》转载
+                		</a></td>
+                		<td class="td"><a href="javascript:;">
+                			【湖南经视】湖南大学生热议：正青春 向梦想前进
+                		</a></td>
+                	</tr>
+                	<tr class="tr">
+                		<td class="td"><a href="javascript:;">
+                			副市长刘永珍带队现场调研我校附属学校建设情况
+                		</a></td>
+                		<td class="td"><a href="javascript:;">
+                			【红网】2018年中部地区第十一届摩擦学学术论坛在湘潭举办
+                		</a></td>
+                	</tr>
+                	<tr class="tr">
+                		<td class="td"><a href="javascript:;">
+                			我校获ACM国际大学生程序设计竞赛亚洲区域金奖
+                		</a></td>
+                		<td class="td"><a href="javascript:;">
+                			【人民网】图解：如何培养时代新人，26位高校书记校长这样说
+                		</a></td>
+                	</tr>
+                	<tr class="tr">
+                		<td class="td"><a href="javascript:;">
+                			副市长刘永珍带队现场调研我校附属学校建设情况
+                		</a></td>
+                		<td class="td"><a href="javascript:;">
+                			【红网】 2018年中部地区第十届摩擦学学术论坛在湘潭举办
+                		</a></td>
+                	</tr>
+                	<tr class="tr">
+                		<td class="td"><a href="javascript:;">
+                			复校后首任校长李振军之子李大地来校洽谈军民融合项目
+                		</a></td>
+                		<td class="td"><a href="javascript:;">
+                			【新湖南】 【百家讲坛平语近人】第一集思想解读人湘潭大学校友
+                		</a></td>
+                	</tr>
+                	<tr class="tr">
+                		<td class="td"><a href="javascript:;">
+                			广西律师行业党性教育专题培训班在我校开班
+                		</a></td>
+                		<td class="td"><a href="javascript:;">
+                			【新湖南】湖南省本科院校“双一流”建设项目名单公布
+                		</a></td>
+                	</tr>
+                	<!--此右侧table来自于刘韬-->
+                    <div class="table-right">
+                    	</table>
+                     	    <!--第二行右侧的table来自于刘韬-->
+                     	    <div class="right">
+                     	    	<table border="1" cellspacing="0" bordercolor="#CAE0FC">
+			<tr style="font-size: 15px;font-family: '微软雅黑';height: 34px;background-color:#FFFFFF;">
+				<td>
+					<a target="_blank" href="http://news.qq.com/mobile/">新闻APP</a>
+					<a target="_blank" href="http://sports.qq.com/kbsweb/">体育APP</a>
+					<a target="_blank" href="https://om.qq.com/userAuth/index">企鹅号</a>
+					<a target="_blank" href="http://kuaibao.qq.com/">快报</a>
+					<a target="_blank" href="http://v.qq.com/download.html#pc">视频</a>
+					<a target="_blank" href="https://browser.qq.com/">浏览器</a>
+					<a target="_blank" href="http://www.weishi.com/">微视</a>
+				</td>
+				<td width="30px">
+					<div class="phone"></div>
+
+				</td>
+			</tr>
+			<tr style="font-size: 15px;font-family: '微软雅黑';height: 34px;background-color:#F5F8FC;">
+				<td>
+					<a bosszone="cp_1_2_1" target="_blank" href="http://weixin.qq.com/">微信</a>
+					<a target="_blank" href="https://im.qq.com/index.shtml">QQ</a>
+					<a target="_blank" href="https://qzone.qq.com/">空间</a>
+					<a target="_blank" href="https://work.weixin.qq.com/wework_admin/register_wx?from=regopt_tlogo_wxcbar_tengxunwang">企业微信</a>
+					<a target="_blank" href="https://mail.qq.com/cgi-bin/loginpage">邮箱</a>
+					<a target="_blank" href="https://cloud.tencent.com/?fromSource=gwzcw.756432.756432.756432">腾讯云</a>
+					<a target="_blank" href="https://guanjia.qq.com/?ADTAG=media.buy.sogo.SEMTOP1">电脑管家</a>
+					<a target="_blank" href="https://vip.qq.com/">会员</a>
+
+				</td>
+						<td width="30px">
+					<div class="phone"></div>
+
+				</td>
+			</tr>
+			<tr style="font-size: 15px;font-family: '微软雅黑';height: 34px;background-color:#FFFFFF;">
+				<td>
+					<a href="http://lol.qq.com/index.shtml?ADTAG=media.innerenter.qqcom.index_navigation">LOL</a>
+					<a target="_blank" href="http://dnf.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation">DNF</a>
+					<a target="_blank" href="http://cf.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation">CF</a>
+					<a target="_blank" href="http://pvp.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation">王者</a>
+					<a target="_blank" href="http://nz.qq.com/main.shtml?ADTAG=media.innerenter.qqcom.index_navigation">逆战</a>
+					<a target="_blank" href="http://huoying.qq.com/act/a20141009landingpage/index.htm?via=45&ADTAG=ied.neiguang&ADTAG=media.innerenter.qqcom.index_navigation">火影OL</a>
+					<a target="_blank" href="http://wuxia.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation">天刀</a>
+					<a target="_blank" href="http://iwan.qq.com/index.htm?ADTAG=media.innerenter.qqcom.indexnavigation">爱玩</a>
+					<a target="_blank" href="http://mxd2.qq.com/main.htm?ADTAG=media.innerenter.qqcom.index_navigation">冒险岛2</a>
+				</td>
+				<td width="30px">
+					<div class="phone"></div>
+
+				</td>
+			</tr>
+			<tr style="font-size: 15px;font-family: '微软雅黑';height: 34px;background-color:#F5F8FC;">
+				<td>
+					<a target="_blank" href="https://pc.qq.com/">软件</a>
+					<a target="_blank" href="https://pay.qq.com/">Q币</a>
+					<a target="_blank" href="https://www.jd.com/?utm_source=qq.com&utm_medium=cpc&utm_campaign=dmp_77&utm_term=dmp_77_11727_d604816f27c2b5e98ae51fd59de8b1c43abfdac_1538472240">京东</a>
+					<a target="_blank" href="https://map.qq.com/#city=%D6%D0%B9%FA&wd=%D6%D0%B9%FA">腾讯地图</a>
+					<a target="_blank" href="https://docs.qq.com/">腾讯文档</a>
+					<a target="_blank" href="https://qian.qq.com/?stat_data=oth87ppcsy00222&ADTAG=SCQD.BD.PC.TXDH1">理财通</a>
+					<button class="button"><a target="_blank" class="more" href="http://www.qq.com/map/">全部</a></button>
+
+				</td>
+				<td width="30px">
+					<div class="phone"></div>
+
+				</td>
+			</tr>
+
+		</table>
+			
+			</div>
+		</div>
+	</body>
+</html>

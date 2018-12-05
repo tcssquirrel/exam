@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>作业之“吃的那些事儿”</title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.global{
+			width: 1500px;
+		}
+		.line1{
+			height: 36px;
+			width: 100%;
+			border: 1px solid #E5E5E5;
+			background-color: #F2F2F2;
+		}
+		/*第二行*/
+		.line2{
+			height: 70px;
+			width: 100%;
+		}
+		.line2-left{
+			float: left;
+			width: 300px;
+			position: relative;
+		}
+		.line2-img{
+			position: absolute;
+			top: 15px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			height: 70px;
+			width: 200px;
+		}
+		.line2-mid{
+			position: relative;
+			left: 300px;
+			height: inherit;
+			float: left;
+			width: 560px;
+		}
+		#one{
+			position: absolute;
+			top: 20px;
+			left: 70px;
+			border: 2px solid #FF0036;
+			height: 25px;
+			width: 450px;
+		}
+		#one+input{
+			position: absolute;
+			top: 20px;
+			left: 524px;
+			background-color: #FF0036;
+			color: #FFFFFF;
+			border: 1px solid #FF0036;
+			height: 29px;
+			width: 60px;
+		}
+		.line2-right{
+			float: left;
+			width: 300px;
+		}
+		/*第三行*/
+		.line3{
+			height:25px ;
+			width: 100%;
+			margin-top: -14px;
+			position: relative;
+		}
+		.line3-left{
+			float: left;
+			width: 300px;
+		}
+		.line3-mid{
+			float: left;
+			width: 560px;
+			position: relative;
+		}
+		.line3-mid ul{
+			position: absolute;
+			left: -200px;
+		}
+		.line3-mid li{
+			float: left;
+			list-style: none;
+			font-family: "微软雅黑";
+			font-size: 14px;
+			border-right:1px solid #CCCCCC ;
+		}
+		 a{
+			text-decoration: none;
+			padding-left: 5px;
+			padding-right: 5px;
+			color: #CCCCCC;
+		}
+		 a:hover{
+			color: #FF3B5D;
+		} 
+		.line3-right{
+			float: left;
+			width: 300px;
+		}
+		/*第四行*/
+		.line4{
+			margin-top: 10px;
+			height: 70px;
+			width: 100%;
+			background-image:url(img/自强不息.png) ;
+			background-repeat:repeat ;
+			background-size: 33% 100%;
+		}
+		/*第五行*/
+		.line5{
+			float: left;
+			margin-top: 10px;
+			height: 40px;
+			width: 100%;
+			border: 1px solid #E5E5E5;
+			background-color: #F2F2F2;
+		}
+		.line5 p{
+			float: left;
+			margin-top: 10px;
+			padding-left: 10px;
+		}
+		.line5 li{
+			float: left;
+			margin-top: 12px;
+			list-style: none;
+			font-family: "微软雅黑";
+			font-size: 14px;
+			color: #080832;
+			border-right:1px solid #CCCCCC ;
+		}
+		.line5 a{
+			text-decoration: none;
+			padding-left: 10px;
+			padding-right: 10px;
+			color: #080832;
+		}
+		.line5 a:hover{
+			color: #FF3B5D;
+		} 
+		/*第六行*/
+		.line6{
+			margin-top: 70px;
+			height: 40px;
+			width: 100%;
+			border: 1px solid #E5E5E5;
+		}
+		.line6 p,input,span{
+			float: left;
+			margin-top: 6px;
+		}
+		.line6 input{
+			height: 25px;
+			width: 70px;
+		}
+		#two{
+			height: 27px;
+			width: 70px;
+			border: 1px solid #A9A9A9;
+			margin-left: 10px;
+			margin-top: 6px;
+			text-align: center;
+			line-height: 24px;
+		}
+		.line6 a{
+			float: right;
+			text-decoration: none;
+			font-family: "微软雅黑";
+			line-height: 40px;
+			color: #080832;
+		}
+		.line6 a:hover{
+			color:#FF3B5D;
+		}
+		/*商品行*/
+		.line7{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.commodity{
+			margin:13px 15px 0 15px ;
+			height: 430px;
+			width: 300px;
+			border: 1px solid #E5E5E5;
+			flex-basis: 100%;
+		}
+		/*.commodity :hover{
+			border: 2px solid #C40000;
+		}*/
+		.commodity img{
+			height:300px;
+			width: 285px;
+		}
+		#three{
+			float: left;
+			color: #5B5B5B;
+		}
+		#three:hover{
+			color: #FF3B5D;
+		}
+		#four{
+			position: absolute;
+			left: -55px;
+			top: 10px;
+			float: left;
+			height: 20px;
+			width: 20px;
+		}
+		#five{
+			position: relative;
+			top: 20px;
+			left: 58px;
+		}
+		
+			@media only screen and (min-width: 480px) and (max-width: 668px) {
+				.line7 div{
+					
+					flex-basis: 50%;
+				}
+			}
+			
+			@media only screen and (min-width: 668px) and (max-width: 900px) {
+				.line7 div{
+					
+					flex-basis: 25%;
+				}
+			}
+			
+			@media only screen and (min-width: 900px) {
+				.line7 div{
+					
+					flex-basis: 10%;
+				}
+			}
+			
+	</style>
+	<body>
+		<div class="global">
+			<!--第一行顶部信息-->
+			<div class="line1">
+             
+			</div>
+			<!--第二行搜索-->
+			<div class="line2">
+				<div class="line2-left">
+                    <img src="img/天猫图1.png" class="line2-img" />
+				</div>
+				<div class="line2-mid">
+						<input type="text" id="one" value="良品铺子"/>
+						<input type="button"value="搜索" />
+				</div>
+				<div class="line2-right">
+					
+				</div>
+			</div>
+			<!--第三行下小导航-->
+			<div class="line3">
+				<div class="line3-left"></div>
+				<div class="line3-mid">
+					<ul>
+						<li><a href="javascript:;">三只松鼠</a></li>
+						<li><a href="javascript:;">良品铺子零食</a></li>
+						<li><a href="javascript:;">百草味</a></li>
+						<li><a href="javascript:;">良品铺子坚果</a></li>
+						<li><a href="javascript:;">良品铺子饼干</a></li>
+						<li><a href="javascript:;">良品铺子麻薯</a></li>
+						<li><a href="javascript:;">周黑鸭</a></li>
+					</ul>
+				</div>
+				<div class="line3-right"></div>
+			</div>
+			<!--自强不息-->
+			<div class="line4">
+			</div>
+			<!--自强不息下导航-->
+			<div class="line5">
+				<p>你是不是想找：</p>
+				<li><a href="javascript:;">良品铺子零食</a></li>
+				<li><a href="javascript:;">良品铺子旗舰店</a></li>
+				<li><a href="javascript:;">良品铺子休闲食品</a></li>
+				<li><a href="javascript:;">优之良品</a></li>
+				<li><a href="javascript:;">无印良品零食</a></li>
+				<li><a href="javascript:;">无印良品拖鞋</a></li>
+				<li><a href="javascript:;">13良品小个子女装</a></li>
+				<li><a href="javascript:;">无印良品肩包</a></li>
+			</div>
+			<div class="line6">
+				<!--左边-->
+				<p style="margin-left: 10px;line-height: 24px;">价格：</p>
+				<input type="text"value="¥" />
+				<span>-</span>
+				<input type="text"value="¥" />
+				<span id="two">发货地</span>
+				<!--右边-->
+				<a href="javascript:;"><input type="checkbox"/>消费者保障</a>
+				<a href="javascript:;"><input type="checkbox"/>7天退换</a>
+				<a href="javascript:;"><input type="checkbox"/>正品保障</a>
+				<a href="javascript:;"><input type="checkbox"/>包邮</a>
+			</div>
+			<div class="line7">
+				<!--第1个商品-->
+				<div class="commodity">
+					<img src="img/路飞图.jpg"/>
+					<p style="margin: 10px 0 3px 0;color: #C40000;font-size: 20px;font-family: '黑体';">¥18.24</p>
+					<p style="margin: 10px 0 3px 0;">海贼王特产二货路飞</p>
+					<p style="margin: 10px 0 3px 0;"><a href="javascript:;" id="three">
+						海贼王旗舰店
+					</a> <span style="float: right;line-height: 8px;">0人付款</span></p>
+					<p id="five">
+						<img src="img/商品小图标.png" id="four" />
+						<select style="margin: 10px 0 0 0;float: right;">
+						    <option value="如实描述：4.8">如实描述：4.8</option>
+						    <option value="服务态度：4.8">服务态度：4.8</option>
+						    <option value="发货速度：4.8">发货速度：4.8</option>
+					    </select>
+					</p>
+				</div>
+				<!--第2个商品-->
+				<div class="commodity">
+					<img src="img/乔巴图.jpg"/>
+					<p style="margin: 10px 0 3px 0;color: #C40000;font-size: 20px;font-family: '黑体';">¥37.98</p>
+					<p style="margin: 10px 0 3px 0;">海贼王特产爱吃棉花糖的乔巴</p>
+					<p style="margin: 10px 0 3px 0;"><a href="javascript:;" id="three">
+						海贼王旗舰店
+					</a> <span style="float: right;line-height: 8px;">0人付款</span></p>
+					<p id="five">
+						<img src="img/商品小图标.png" id="four" />
+						<select style="margin: 10px 0 0 0;float: right;">
+						    <option value="如实描述：4.8">如实描述：4.8</option>
+						    <option value="服务态度：4.8">服务态度：4.8</option>
+						    <option value="发货速度：4.8">发货速度：4.8</option>
+					    </select>
+					</p>
+				</div>
+				<!--第3个商品-->
+				<div class="commodity">
+					<img src="img/娜美图.png"/>
+					<p style="margin: 10px 0 3px 0;color: #C40000;font-size: 20px;font-family: '黑体';">¥188.74</p>
+					<p style="margin: 10px 0 3px 0;">海贼王特产迷人的娜美</p>
+					<p style="margin: 10px 0 3px 0;"><a href="javascript:;" id="three">
+						海贼王旗舰店
+					</a> <span style="float: right;line-height: 8px;">0人付款</span></p>
+					<p id="five">
+						<img src="img/商品小图标.png" id="four" />
+						<select style="margin: 10px 0 0 0;float: right;">
+						    <option value="如实描述：4.8">如实描述：4.8</option>
+						    <option value="服务态度：4.8">服务态度：4.8</option>
+						    <option value="发货速度：4.8">发货速度：4.8</option>
+					    </select>
+					</p>
+				</div>
+				<!--第4个商品-->
+				<div class="commodity">
+					<img src="img/弗兰基图.jpg"/>
+					<p style="margin: 10px 0 3px 0;color: #C40000;font-size: 20px;font-family: '黑体';">¥48.54</p>
+					<p style="margin: 10px 0 3px 0;">海贼王特产变态弗兰基</p>
+					<p style="margin: 10px 0 3px 0;"><a href="javascript:;" id="three">
+						海贼王旗舰店
+					</a> <span style="float: right;line-height: 8px;">0人付款</span></p>
+					<p id="five">
+						<img src="img/商品小图标.png" id="four" />
+						<select style="margin: 10px 0 0 0;float: right;">
+						    <option value="如实描述：4.8">如实描述：4.8</option>
+						    <option value="服务态度：4.8">服务态度：4.8</option>
+						    <option value="发货速度：4.8">发货速度：4.8</option>
+					    </select>
+					</p>
+				</div>
+				<!--第5个商品-->
+				<div class="commodity">
+					<img src="img/香吉士图.jpg"/>
+					<p style="margin: 10px 0 3px 0;color: #C40000;font-size: 20px;font-family: '黑体';">¥47.88</p>
+					<p style="margin: 10px 0 3px 0;">海贼王特产色鬼香吉士</p>
+					<p style="margin: 10px 0 3px 0;"><a href="javascript:;" id="three">
+						海贼王旗舰店
+					</a> <span style="float: right;line-height: 8px;">0人付款</span></p>
+					<p id="five">
+						<img src="img/商品小图标.png" id="four" />
+						<select style="margin: 10px 0 0 0;float: right;">
+						    <option value="如实描述：4.8">如实描述：4.8</option>
+						    <option value="服务态度：4.8">服务态度：4.8</option>
+						    <option value="发货速度：4.8">发货速度：4.8</option>
+					    </select>
+					</p>
+				</div>
+				<div class="commodity">
+					<img src="img/路飞和艾斯.jpg"/>
+					<p style="margin: 10px 0 3px 0;color: #C40000;font-size: 20px;font-family: '黑体';">¥18888.64</p>
+					<p style="margin: 10px 0 3px 0;">海贼王特产路飞和艾斯组合销售</p>
+					<p style="margin: 10px 0 3px 0;"><a href="javascript:;" id="three">
+						海贼王旗舰店
+					</a> <span style="float: right;line-height: 8px;">0人付款</span></p>
+					<p id="five">
+						<img src="img/商品小图标.png" id="four" />
+						<select style="margin: 10px 0 0 0;float: right;">
+						    <option value="如实描述：4.8">如实描述：4.8</option>
+						    <option value="服务态度：4.8">服务态度：4.8</option>
+						    <option value="发货速度：4.8">发货速度：4.8</option>
+					    </select>
+					</p>
+				</div>
+				<div class="commodity">
+					<img src="img/罗杰图.jpg"/>
+					<p style="margin: 10px 0 3px 0;color: #C40000;font-size: 20px;font-family: '黑体';">¥98.29</p>
+					<p style="margin: 10px 0 3px 0;">海贼王特产罗杰</p>
+					<p style="margin: 10px 0 3px 0;"><a href="javascript:;" id="three">
+						海贼王旗舰店
+					</a> <span style="float: right;line-height: 8px;">0人付款</span></p>
+					<p id="five">
+						<img src="img/商品小图标.png" id="four" />
+						<select style="margin: 10px 0 0 0;float: right;">
+						    <option value="如实描述：4.8">如实描述：4.8</option>
+						    <option value="服务态度：4.8">服务态度：4.8</option>
+						    <option value="发货速度：4.8">发货速度：4.8</option>
+					    </select>
+					</p>
+				</div>
+				<div class="commodity">
+					<img src="img/索隆图.jpg"/>
+					<p style="margin: 10px 0 3px 0;color: #C40000;font-size: 20px;font-family: '黑体';">¥199.34</p>
+					<p style="margin: 10px 0 3px 0;">海贼王特产索隆</p>
+					<p style="margin: 10px 0 3px 0;"><a href="javascript:;" id="three">
+						海贼王旗舰店
+					</a> <span style="float: right;line-height: 8px;">0人付款</span></p>
+					<p id="five">
+						<img src="img/商品小图标.png" id="four" />
+						<select style="margin: 10px 0 0 0;float: right;">
+						    <option value="如实描述：4.8">如实描述：4.8</option>
+						    <option value="服务态度：4.8">服务态度：4.8</option>
+						    <option value="发货速度：4.8">发货速度：4.8</option>
+					    </select>
+					</p>
+				</div>
+				
+			</div>
+			<div class="line8"></div>
+			<div class="line9"></div>
+			<div class="line10"></div>
+		</div>
+	</body>
+</html>

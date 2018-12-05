@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>网二陈文杰js第二次作业实验页面</title> 
+	<style>
+		#globe{
+			height: 700px;
+			width: 500px;
+			margin: auto;
+			border: 1px solid #001D26;
+		}
+		#headDiv{
+			background-color: #B8B8B8;
+		}
+		#table{
+			margin: 0;
+			height: auto;
+			width: 500px;
+			border: 1px 0 0 0 solid #000000 ;
+		}
+		tr{
+			height: 30px;
+		}
+		
+		td{
+			border-left: 1px solid #FFFFFF;
+			background-color: #E7EAED;
+		}
+	</style>
+	<script>
+		
+		function capture(data){
+					var fa=data.parentNode.parentNode;
+					fa.parentNode.removeChild(fa);
+				}
+             window.onload=function(){
+				var input_botton=document.getElementById("input");
+				var count=0;
+		input_botton.onclick = function(){
+					count++;
+					var name=document.getElementById("name").value;
+					var sexs=document.getElementsByName("radio");
+					var table=document.getElementById("table");
+					var sex;
+			for (var i=0; i<=1; i++){
+						if (sexs[i].checked==true)
+						{
+							if (sexs[i].value==0) sex="男";
+							else sex="女";
+							break;
+						}
+					}
+		var x=document.createElement("tr");
+					x.innerHTML="<td>"
+					+count+
+					"</td>" +"<td id='zz"
+					+count+
+					"' onmouseover='changecolor1(this)' onmouseout='changecolor2(this)'>"
+					+name+
+					"</td>" + "<td>"
+					+sex+
+					"</td>"+"<td><a id='XX"
+					+count+
+					"' href='#' onclick='capture(this);'>删除</a></td>";
+					table.appendChild(x);
+		
+		}//onclick
+	}//onload
+	</script>
+</head>
+<body>
+    	<div id="globe">
+    		<div id="headDiv">
+    			<span>姓名</span>
+    			<input type="text" id="name"/>
+    			<span>性别：</span>
+    			<input type="radio" name="radio" value="0" />男
+                <input type="radio" name="radio"  value="1"/>女
+            <button id="input">添加</button>
+    		</div>
+    		<table id="table">
+    		<tr style="background-color: #CFC9B8;" id="trFirst">
+    			<td>编号</td>
+    			<td>姓名</td>
+    			<td>性别</td>
+    			<td>操作</td>
+    		</tr>
+    		
+    	</table>
+    	</div>
+</body>
+</html>

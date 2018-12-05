@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>网二陈文杰js第一次作业实验页面</title> 
+<style> 
+	#outline{
+		height: 500px;
+		width: 400px;
+		background-color: #0B9CFF;
+		position: absolute;
+		top: 0;
+		right: 0; 
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+	.a{
+		margin-top: 20px;
+		height: 50px;
+		display:block;
+		line-height: 45px;
+		text-decoration: none;
+		color: #FFFFFF;
+		text-align: center;
+		background-color: #4D8CF4;
+	}
+	.p{
+		height: 50px;
+		line-height: 45px;
+		color: #FFFFFF;
+		text-align: center;
+		background-color: #1CA261;
+	}
+</style>
+<script>
+	alert("相识即是缘，赏个优秀呗(^_^)");
+	function adda()
+{
+	var a=document.createElement('a');
+		a.innerHTML = '我是新创建的a元素';
+		a.style.backgroundColor ='#EA2000';
+		a.style.color= '#FFFFCC';
+		a.className='a';
+		a.setAttribute("href","#");
+    var newA = document.getElementById('outline');
+         newA.insertBefore(a,newA.lastChild);
+}
+     //删除a元素
+     function removeAllA()
+     {
+     	var div=document.getElementById("outline");
+     	var y=div.childNodes;
+     	for(var i=y.length-1;i>=0;i--)
+     	{
+     		if(y[i].tagName=="A")div.removeChild(y[i]);
+     	}
+     }
+     //删除p元素
+     function removeAllP()
+     {
+     	var div=document.getElementById("outline");//选定好父元素即找好改动的元素范围
+     	var y=div.childNodes;//y表示outline中元素个数的数组
+     	for( i=y.length-1;i>=0;i--)//i可以不定义
+     	{
+     		if(y[i].tagName=="P")div.removeChild(y[i]);
+     	}
+     }
+				function changeColor()
+     {
+     	var div=document.getElementById("outline");//选定好父元素即找好改动的元素范围
+     	var y=div.childNodes;//y表示outline中元素个数的数组
+     	for( i=y.length-1;i>=0;i--)//i可以不定义
+     	{
+     		if(y[i].tagName=="P"||y[i].tagName=="A")
+     		y[i].style.backgroundColor="#EAEC27";
+     	}
+     }
+	
+</script>
+</head>
+<body>
+<div id="outline">
+	<a href="javascript:alert('你好烦啊！！！我就想做一个安静的帅链接');" class="a">我是一个超安静的超链接，别点我。</a>
+	<p class="p">p1</p>
+	<p class="p">p2</p>
+	<button onclick="alert('讨厌！你点我干嘛(ง •̀_•́)ง')">不要点我</button>
+	<button type="button"   onclick="changeColor()">改变所有背景色</button>
+	<button type="button"   onclick="adda()">增加a元素</button>
+	<button type="button"   onclick="removeAllA()">删除a元素</button>
+	<button type="button"   onclick="removeAllP()">删除p元素</button>
+</div>
+</body>
+</html>
